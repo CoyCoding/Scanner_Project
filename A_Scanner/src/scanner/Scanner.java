@@ -14,7 +14,7 @@ import java.io.IOException;
 import com.screens.Screens;
 
 public class Scanner extends Screens {
-//Change other classes to follow has-a structure instead of extending.
+//Change other classes to interfaces. follow has-a structure instead of extending.
 	
 	public static void main(String[] args) {
 		while (true) {
