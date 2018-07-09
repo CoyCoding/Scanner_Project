@@ -18,8 +18,10 @@ public class Scanner extends Screens {
 	
 	public static void main(String[] args) {
 		while (true) {
+			
 			logon();
 			// Unfinished log on screen
+			//eventually add thread to auto log out on timer
 			screen0();
 			//
 			// Screen0 displays the first screen.
