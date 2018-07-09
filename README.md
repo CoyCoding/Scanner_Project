@@ -16,7 +16,7 @@ NEXT GOAL (part 1)<br />
 ----------<br />
 My goal (part 1) is to give the inventory object a date variable and check it against the Door object.<br />
 The inventory object will only be Loaded if the inventory date is after or between the Door ojects dates.<br />
-Dock Door object also needs to be an object consisting of a List<inventoryObject> to hold represent the "load"<br />
+Dock Door object also needs to be an object consisting of a List<<inventoryObject>> to hold and represent the "load"<br />
 The inventory object has the boolean loaded to signify the load, but still needs another String LoadLocation for users<br />
 <br />
 (part 2)<br />
