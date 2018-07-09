@@ -4,7 +4,8 @@ package scanner;
 //
 //
 // THIS MAIN METHOD CONSOLE PROTYPE
-//
+// AFTER COMPLETION CHANGE INTO A MOBLE APP FOR PRACTICE
+// AFTER COMPLETION CREATE MY SQL SERVER FOR PRACTICE
 //
 //
 //
@@ -13,7 +14,8 @@ import java.io.IOException;
 import com.screens.Screens;
 
 public class Scanner extends Screens {
-
+//Change other classes to follow has-a structure instead of extending.
+	
 	public static void main(String[] args) {
 		while (true) {
 			logon();
