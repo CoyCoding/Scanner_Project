@@ -16,8 +16,9 @@ NEXT GOAL (part 1)<br />
 ----------<br />
 My goal (part 1) is to give the inventory object a date variable and check it against the Door object.<br />
 The inventory object will only be Loaded if the inventory date is after or between the Door ojects dates.<br />
-Dock Door object also needs to be an object consisting of a List<<inventoryObject>> to hold and represent the "load"<br />
-The inventory object has the boolean loaded to signify the load, but still needs another String LoadLocation for users<br />
+Dock Door object also needs to be an object consisting of a List<> to hold the item numbers.<br />
+This can be used as a key to then seach the Item(LPN)List to grab that info much like a join in SQL  <br />
+DockDoor and locator will extend from a new class Location and be put in the package Locations. <br />
 <br />
 (part 2)<br />
  Another method unload needs to be implemented. So that loaded inventory items can be unloaded and loaded again.<br />
