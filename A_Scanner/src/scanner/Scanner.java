@@ -1,27 +1,31 @@
 package scanner;
 
+import java.io.IOException;
+
 //
 //
 //
 // THIS MAIN METHOD CONSOLE PROTYPE
-// AFTER COMPLETION CHANGE INTO A MOBLE APP FOR PRACTICE
-// AFTER COMPLETION CREATE MY SQL SERVER FOR PRACTICE
 //
 //
 //
-import java.io.IOException;
+//
+
+//import java.io.IOException;
 
 import com.screens.Screens;
 
 public class Scanner extends Screens {
-//Change other classes to interfaces. follow has-a structure instead of extending.
+	//Scanner Display is a Screen so it will extend it
+	//uses the keys variable to index through screens.
+	//each Screen is a method doing a task and returning key variable
+	//should be objects.
+	//could map more efficiently, will look into
 	
 	public static void main(String[] args) {
-		while (true) {
-			
+		while (true) {	
 			logon();
 			// Unfinished log on screen
-			//eventually add thread to auto log out on timer
 			screen0();
 			//
 			// Screen0 displays the first screen.
@@ -38,15 +42,8 @@ public class Scanner extends Screens {
 					// this ioexception from ever happening.
 					//
 				}
-				// testing methods
-				//
-				// loadDoorScreen2C6A();
-				// loadLpns();
-				// loadDoorDateScreen();
-				//
-				// testing methods
-			}
 
+			}
 		}
 	}
 }
