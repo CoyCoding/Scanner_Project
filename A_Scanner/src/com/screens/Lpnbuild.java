@@ -4,9 +4,12 @@ public class Lpnbuild {
 	
 	private String lpn;
 	private Boolean loaded; 
-	private String department;
+	private String shipLocation;
 	private String location;
-	private String date;
+	private String oldLocation;
+	//I will implement this is when i get more time hold the old location for unloading.
+	//When you unload a item it will go to its old location.
+	private int date;
 	
 	//constructor
 	public Lpnbuild() {
@@ -20,9 +23,13 @@ public class Lpnbuild {
 		this.loaded = true;}else {
 		this.loaded = false;
 		}
-		this.department = department;
+		this.shipLocation = department;
 		this.location = location;
-		this.date = date;
+		try {
+			this.date = Integer.parseInt(date);
+			}catch(NumberFormatException e) {
+				System.out.println(lpn + loaded + department + location + date);
+				System.out.println("String made it to the date LPN");	}
 	}
 	
 	public String getLpn() {
@@ -34,38 +41,46 @@ public class Lpnbuild {
 	}
 	
 	public String getDepartment() {
-		return department;
+		return shipLocation;
 	}
 	
 	public String getLocation() {
 		return location;
 	}
-	public String getDate() {
+	
+	public int getDate() {
 		return date;
 	}
+	
 	public String allData() {
 		String i;
-		i = lpn + ", " + loaded + ", " + department + ", " + location + ", " + date + ", ";
+		i = lpn + ", " + loaded + ", " + shipLocation + ", " + location + ", " + date + ", ";
 		return i;	
 	}
+
 	public String replaceData() {
 		this.setLoaded(true);
 		return this.allData();
 		
 	}
+	
 	public void setLpn(String Lpn) {
 		this.lpn = Lpn;
 	}
+	
 	public void setLoaded(boolean loaded) {
 		this.loaded = loaded;
 	}
+	
 	public void setDepartment(String department) {
-		this.department = department;
+		this.shipLocation = department;
 	}
+	
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	public void setDate(String date) {
+	
+	public void setDate(int date) {
 		this.date = date;
 	}
 	
