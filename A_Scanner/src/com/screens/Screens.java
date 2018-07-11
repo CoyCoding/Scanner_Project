@@ -2,7 +2,7 @@ package com.screens;
 
 import java.util.List;
 import java.util.Scanner;
-import com.dockDoors.DockDoors;
+import com.dockDoors.DockDoor;
 
 //import java.io.IOException;
 import java.io.IOException;
@@ -244,13 +244,15 @@ public class Screens extends ScreenMethods {
 		// better names later
 
 		System.out.println("1.) Load Door");
-		// 2C6A
+		// 2C6A METHOD SCREEN
 		System.out.println("2.) Unload Door");
-		// 2C6B
+		// 2C6B METHOD SCREEN
 		System.out.println("3.) I cant remember what goes here");
-		// 2C6C
+		// 2C6C METHOD SCREEN
+		System.out.println("4.) Date Door");
+		// 2C6D METHOD SCREEN
 		System.out.println("0.) Logout");
-		// Z
+		// Z METHOD SCREEN
 
 		correctSelection = false;
 		key = null;
@@ -274,6 +276,11 @@ public class Screens extends ScreenMethods {
 				key = "2C6";
 				correctSelection = true;
 				break;
+			case "4":
+				System.out.println("I havent programed this screen");
+				key = "2C6D";
+				correctSelection = true;
+				break;
 			case "0":
 				System.out.println("Logging Off: .... \n \n \n");
 				key = "Z";
@@ -285,7 +292,7 @@ public class Screens extends ScreenMethods {
 
 	public static void loadDoorScreen2C6A() throws IOException {
 		// Screen for loading lpns to doors KEY = 2C6A
-		//FROM 2C6
+		// FROM 2C6
 		correctSelection = false;
 		String dockDoor;
 		System.out.print("dock door entry \n");
@@ -297,8 +304,8 @@ public class Screens extends ScreenMethods {
 		}
 		while (correctSelection == false) {
 
-			//System.out.println(dockDoor);
-			
+			// System.out.println(dockDoor);
+
 			if (dockDoor.equals("show all")) {
 				System.out.print("1.)DLT ERD \n2.)DLT WRD \n3.)" + "DLT SRD \n4.)DLT NRD \n0.)Go Back \n");
 
@@ -393,8 +400,8 @@ public class Screens extends ScreenMethods {
 
 	}
 
-	public static void loadDoorDateScreen() {
-		//
+	public static void loadDoorDateScreen2C6D() {
+		// Key = 2C6D
 		// IN CONSTRUCTION
 		// IN CONSTRUCTION
 		//
@@ -403,7 +410,7 @@ public class Screens extends ScreenMethods {
 		// normally this could just be done with a actionkey when I GUI
 		// could just all around find a work around for this
 
-		DockDoors test = new DockDoors();
+		DockDoor test = new DockDoor();
 		// empty object for testing methods on this screen;
 		do {
 			System.out.println("Select MM/DD/YYYY");
@@ -420,17 +427,5 @@ public class Screens extends ScreenMethods {
 		// key 2 can be empty.
 
 	}
-}
 
-/*
- * end of program space
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- */
+}
