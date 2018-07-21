@@ -14,7 +14,10 @@ creates inventory based objects from txt.file and updates txt.file based on chan
 <br />
 NEXT GOAL (part 1)<br />
 ----------<br />
-My goal (part 1) : COMPLETE 
+My goal (part 1) : COMPLETE <br />
+*
+<br />*
+<br />
 (part 2) :
 DockDoor and locator will extend from a new class abstract class Location and be put in the package Locations. <br />
 This has become its own goal as the abstract class of location will be extended by all objects because every object is technicaly a location. Even LPN (Location Product Number) I beilive is a location for the actual product. <br />
