@@ -2,16 +2,27 @@ package com.screens;
 
 import java.util.List;
 import java.util.Scanner;
-import com.dockDoors.DockDoor;
+
+import com.location.DockDoor;
 
 //import java.io.IOException;
 import java.io.IOException;
 
 public class Screens extends ScreenMethods {
+	// all screens should be in a set as all keys and screens are unique.
+	
 	protected static String key;
+	//this will eventually just be the key->door <Set>
 	protected static Scanner input = new Scanner(System.in);
-	protected static boolean correctSelection;
-
+	private static boolean correctSelection;
+	//This isn't needed but it's own problem to solve 
+	//Event handling will remove this as event.onKeyPress would be the "correctSelection" 
+	//but the logic is what im working on right now
+	
+	
+	
+	
+	
 	//
 	// Key is used for a constant input for Scanner input;
 	// Boolean is used to escape recursion and many other places;
@@ -58,29 +69,29 @@ public class Screens extends ScreenMethods {
 		// key will be 3
 
 		boolean correctSelection = false;
-		key = null;
+		String tempKey = null;
 
 		// I use nextLine instead of int temporally until I write the try{catch{for
 		// inputexceptionerror
 
 		while (!correctSelection) {
-			key = input.nextLine();
-			switch (key) {
+			tempKey = input.nextLine();
+			switch (tempKey) {
 			case "1":
-				key = "0";
+				tempKey = "0";
 				correctSelection = true;
 				break;
 			case "2":
-				key = "2";
+				tempKey = "2";
 				correctSelection = true;
 				break;
 			case "3":
-				key = "0";
+				tempKey = "0";
 				correctSelection = true;
 				break;
 			}
 		}
-		return key;
+		return tempKey;
 
 	}
 
@@ -244,15 +255,13 @@ public class Screens extends ScreenMethods {
 		// better names later
 
 		System.out.println("1.) Load Door");
-		// 2C6A METHOD SCREEN
+		// 2C6A
 		System.out.println("2.) Unload Door");
-		// 2C6B METHOD SCREEN
+		// 2C6B
 		System.out.println("3.) I cant remember what goes here");
-		// 2C6C METHOD SCREEN
-		System.out.println("4.) Date Door");
-		// 2C6D METHOD SCREEN
+		// 2C6C
 		System.out.println("0.) Logout");
-		// Z METHOD SCREEN
+		// Z
 
 		correctSelection = false;
 		key = null;
@@ -276,11 +285,6 @@ public class Screens extends ScreenMethods {
 				key = "2C6";
 				correctSelection = true;
 				break;
-			case "4":
-				System.out.println("I havent programed this screen");
-				key = "2C6D";
-				correctSelection = true;
-				break;
 			case "0":
 				System.out.println("Logging Off: .... \n \n \n");
 				key = "Z";
@@ -292,7 +296,7 @@ public class Screens extends ScreenMethods {
 
 	public static void loadDoorScreen2C6A() throws IOException {
 		// Screen for loading lpns to doors KEY = 2C6A
-		// FROM 2C6
+		//FROM 2C6
 		correctSelection = false;
 		String dockDoor;
 		System.out.print("dock door entry \n");
@@ -304,8 +308,8 @@ public class Screens extends ScreenMethods {
 		}
 		while (correctSelection == false) {
 
-			// System.out.println(dockDoor);
-
+			//System.out.println(dockDoor);
+			
 			if (dockDoor.equals("show all")) {
 				System.out.print("1.)DLT ERD \n2.)DLT WRD \n3.)" + "DLT SRD \n4.)DLT NRD \n0.)Go Back \n");
 
@@ -427,5 +431,17 @@ public class Screens extends ScreenMethods {
 		// key 2 can be empty.
 
 	}
-
 }
+
+/*
+ * end of program space
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
