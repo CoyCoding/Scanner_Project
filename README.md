@@ -2,36 +2,18 @@
 A first build of my mock scanner system taking input from user. (Java)<br />
 No where near complete but posted to show progress.<br />
 <br />
-7/8/2018<br />
-Scanner as of now:<br />
-Loops forever -> <br />
-Checks user name and password concurance.<br />
-prints selectable text menus. <br />
-creates inventory based objects from txt.file and updates txt.file based on changes.<br />
-<br />
-(txt "database", easily can be re-writin to sql SELECT FROM WHERE structure for another model.)<br />
-<br />
-7/22/2018<br />
-Somehow lost abot 8 hours of additions such as list of objects held in dockdoor and logic testing on how to load/unload/move??
-<br /> even updated text file but forgot to update actual files?
-<br /> I honestly don't remember not saving my files oh well I will just re- type it.
-<br />
+7/23/2018<br />
+V.2 up now this version every "location" extends location and thus the code is clean. and presise.<br />
+This model is very close to the structure of what the final build would be.<br />
+The old is left in A_Scanner as some of the logic/methods are to be repurposed.<br />
 ----------<br />
 My goal (part 1) : COMPLETE <br />
 *
 <br />*
 <br />
-(part 2) :
-DockDoor and locator will extend from a new class abstract class Location and be put in the package Locations. <br />
-This has become its own goal as the abstract class of location will be extended by all objects because every object is technicaly a location. Even LPN (Location Product Number) I beilive is a location for the actual product. <br />
-All locations will have a:<br />
- date - doesn't need to be used;<br />
- name - location needs a user readable name / == lpn: 1234 / == name : M.KRD/<br />
- department = can be null; <br /> 
- <br />
-                                       If methods are loadmethods are contained withen the location all load/move() method logic can be<br />                                          @overwriten is done by the location itself. This way different ojects are loaded to one  another but the method names stay the same (oop principles) <br />
-                                       If you wanted, dockDoors and staging lanes could be loaded from the same "screen" this way because as I said the logic is done by the object itself, but if you want them separated different "screens" that could be acomplished just as well. with if (locationObject.locationType() == Const String correctObjectType){};
+GOAL (part 2) :
+Okay goal part 2 was accomplished. All locations now extend location; however, I left behind the "display class" as I feel it needs completely reworked around the new correct programming structure. So although goal 2 was reached I want eveything that was removed from the original to be functioning again first.
 <br />
 <br />
-(part 2)<br />
- Another method unload needs to be implemented. So that loaded inventory items can be unloaded and loaded again.<br />
+(part 3)<br />
+ I had move methods / load methods / and undload methods done but building them again should be easy working my way forward.<br />
