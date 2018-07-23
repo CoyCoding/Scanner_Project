@@ -8,11 +8,14 @@ Loops forever -> <br />
 Checks user name and password concurance.<br />
 prints selectable text menus. <br />
 creates inventory based objects from txt.file and updates txt.file based on changes.<br />
-//<br />
-(txt "database", easily can be re-writin to sql SELECT FROM WHERE structure for another model.)<br />
-//<br />
 <br />
-NEXT GOAL (part 1)<br />
+(txt "database", easily can be re-writin to sql SELECT FROM WHERE structure for another model.)<br />
+<br />
+7/22/2018<br />
+Somehow lost abot 8 hours of additions such as list of objects held in dockdoor and logic testing on how to load/unload/move??
+<br /> even updated text file but forgot to update actual files?
+<br /> I honestly don't remember not saving my files oh well I will just re- type it.
+<br />
 ----------<br />
 My goal (part 1) : COMPLETE <br />
 *
