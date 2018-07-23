@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.dockDoors.DockDoor;
-
 //
 //
 // THESE METHODS ARE USED BUT NOT PACKAGED CORRECTLY YET
@@ -18,42 +16,22 @@ import com.dockDoors.DockDoor;
 
 public class ScreenMethods{
 	
-	public static List<DockDoor> buildDockDoors(){
-		//builds a List of DockDoors from the dockdoor file non existant. 
-		List<DockDoor> ddList = new ArrayList<>();
-		String file = "DDL.txt";
-		InputStream ddfile = com.screens.ScreenMethods.class.getResourceAsStream(file);
-		Scanner ddScanner = new Scanner(ddfile);
-		
-		ddScanner.useDelimiter(", ");
-		
-		while(ddScanner.hasNext()) {
-			int i = 0;
-			ddList.add(i, new DockDoor(ddScanner.nextLine(),  ddScanner.nextLine(), ddScanner.nextLine()));
-			// use constructor with input from file (fake data base) to build lpn list could be for loop?
-			i++;
-		}
-		System.out.println("/n FILE FOUND /n");
-		ddScanner.close();
-		return ddList;
-	}
+
+	public static List<String> checkDockDoors(){
+	List<String> dockDoorList = new ArrayList<>();
+		//Temp dock door array until I make dook doors objects such as lpns
+	dockDoorList.add("DLT ERD");
+	dockDoorList.add("DLT WRD");
+	dockDoorList.add("DLT SRD");
+	dockDoorList.add("DLT NRD");
+	System.out.println(dockDoorList.size());
+	return dockDoorList;
 	
-//	public static List<String> checkDockDoors(){
-//	List<String> dockDoorList = new ArrayList<>();
-//		//Temp dock door array until I make dook doors objects such as lpns
-//	dockDoorList.add("DLT ERD");
-//	dockDoorList.add("DLT WRD");
-//	dockDoorList.add("DLT SRD");
-//	dockDoorList.add("DLT NRD");
-//	System.out.println(dockDoorList.size());
-//	return dockDoorList;
-//	
-//	}
+	}
 		
 	public static List<Lpnbuild> loadLpns() throws FileNotFoundException {
 		List<Lpnbuild> lpnlist = new ArrayList<>();
-		String file = "lpn.txt";
-		InputStream lpnFile = com.screens.ScreenMethods.class.getResourceAsStream(file);
+		InputStream lpnFile = com.screens.ScreenMethods.class.getResourceAsStream("lpn.txt");
 		Scanner lpnScanner = new Scanner(lpnFile);
 		
 		lpnScanner.useDelimiter(", ");
@@ -76,9 +54,6 @@ public class ScreenMethods{
 		
 	public static void loadScreenKey(String key) throws IOException  {
 		switch (key) {
-		case "2C6D":
-			Screens.loadDoorScreen2C6A();
-			break;
 		case "2C6A":
 			Screens.loadDoorScreen2C6A();
 			break;

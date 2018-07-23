@@ -4,11 +4,8 @@ public class Lpnbuild {
 	
 	private String lpn;
 	private Boolean loaded; 
-	private String shipLocation;
+	private String department;
 	private String location;
-	private String oldLocation;
-	//I will implement this is when i get more time hold the old location for unloading.
-	//When you unload a item it will go to its old location.
 	private int date;
 	
 	//constructor
@@ -23,7 +20,7 @@ public class Lpnbuild {
 		this.loaded = true;}else {
 		this.loaded = false;
 		}
-		this.shipLocation = department;
+		this.department = department;
 		this.location = location;
 		try {
 			this.date = Integer.parseInt(date);
@@ -41,20 +38,18 @@ public class Lpnbuild {
 	}
 	
 	public String getDepartment() {
-		return shipLocation;
+		return department;
 	}
 	
 	public String getLocation() {
 		return location;
 	}
-	
 	public int getDate() {
 		return date;
 	}
-	
 	public String allData() {
 		String i;
-		i = lpn + ", " + loaded + ", " + shipLocation + ", " + location + ", " + date + ", ";
+		i = lpn + ", " + loaded + ", " + department + ", " + location + ", " + date + ", ";
 		return i;	
 	}
 
@@ -73,7 +68,7 @@ public class Lpnbuild {
 	}
 	
 	public void setDepartment(String department) {
-		this.shipLocation = department;
+		this.department = department;
 	}
 	
 	public void setLocation(String location) {
