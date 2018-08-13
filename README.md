@@ -1,6 +1,11 @@
 # Update (8/13/2018)
 I am focusing more on my front end (html5, javascript, react, angularjs, bootstrap) I will return to this eventually, but for now I am really enjoying learning new tech. 
 
+The big thing left for this project is still adding:
+  * MYSQL DB for holding the location objects.
+  * locations should just use a date object instead of int(maybe).
+  * locations need to be implement comparable.
+
 
 # Scanner_Project
 A first build of my mock scanner system taking input from user. (Java)<br />
